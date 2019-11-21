@@ -1,0 +1,169 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --lightcyan: hsl(179, 50%, 60%);
+  --yellow: hsl(71, 73%, 54%);
+  --lightgray: hsl(204, 43%, 93%);
+  --darkgray: hsl(218, 22%, 67%);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Karla, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #F0F0F0;
+}
+
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  line-height: 25px;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  place-items: center center;
+  align-content: center;
+}
+
+.card {
+  display: grid;
+  grid-template-areas:
+  "intro    intro"
+  "pricing  details";
+  grid-template-columns: 50% 50%;
+  width: 625px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Intro  */
+.intro {
+  grid-area: intro;
+  background: white;
+  padding: 40px;
+}
+
+.intro h2 {
+  color: var(--cyan);
+  margin-bottom: 24px;
+}
+
+.intro h3 {
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: var(--darkgray);
+}
+
+/* Pricing */
+.pricing {
+  grid-area: pricing;
+  padding: 40px;
+  background: var(--cyan);
+  color: white;
+}
+
+.pricing h3 {
+  margin-bottom: 15px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: var(--lightgray);
+}
+
+.price-value {
+  font-size: 30px;
+  font-weight: 900;
+  margin-right: 10px;
+  color: white;
+}
+
+.cta {
+  background: var(--yellow);
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  margin: 30px 0 0 0;
+  font-family: Karla, sans-serif;
+  font-weight: 700;
+}
+
+/* Details */
+.details {
+  grid-area: details;
+  padding: 40px;
+  background: var(--lightcyan);
+  color: white;
+}
+
+.details ul {
+  list-style: none;
+}
+
+.details h3 {
+  margin-bottom: 20px;
+}
+
+.details ul {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px; text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 625px) {
+
+  .card {
+    grid-template-areas:
+    "intro"
+    "pricing"
+    "details";
+    grid-template-columns: 1fr;
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .wrapper {
+    box-shadow: none;
+    justify-items: start;
+    height: auto;
+  }
+}
