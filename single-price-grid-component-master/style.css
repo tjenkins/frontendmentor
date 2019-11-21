@@ -119,6 +119,10 @@ p {
   font-weight: 700;
 }
 
+.cta:hover {
+  cursor: pointer;
+}
+
 /* Details */
 .details {
   grid-area: details;
