@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
-
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+    crossorigin="anonymous"
+  >
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,17 +20,58 @@
 </head>
 <body>
 
-  We're coming soon
+  <main class="hero-grid">
+    <div class="cta-background"></div>
+    <img class="logo" src="images/logo.svg" >
+    <section class="cta-container">
 
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
+      <header>
+        <h1>
+          <em>We're</em><br> coming<br> soon
+        </h1>
+      </header>
 
-  Email Address
-  
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+
+      <div class="email-wrapper">
+        <form action="#">
+          <input
+            type="email"
+            class="email-input"
+            placeholder="Email Address"
+            required
+          />
+          <button type="submit" class="submit-button">
+            <img class="submit-arrow" src="images/icon-arrow.svg" alt="submit" >
+            <div class="error-icon">
+              <img src="images/icon-error.svg" alt="error" >
+            </div>
+          </button>
+          <div class="error-message">
+            Please provide a valid email
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="hero-img-container">
+        <picture>
+            <source media="(min-width: 601px)" srcset="images/hero-desktop.jpg">
+            <source media="(max-width: 600px)" srcset="images/hero-mobile.jpg">
+            <img class="hero-img" src="images/hero-desktop.jpg" alt="hero image" >
+        </picture>
+
+    </div>
+
+  </main>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Tim Jenkins</a>.
     </p>
   </footer>
 </body>
